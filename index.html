@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacija</title>
+    <style>
+    body {
+      background-color:  #050210;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .krug {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        padding: 10px;
+        position:relative;
+        background: conic-gradient( #fb5dad, #55fb9f, #b97aff);
+        animation: rotacija 2s linear infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 90px #b97aff, 0 0 60px #55fb9f, 0 0 90px #fb5dad, 0 0 30px #b97aff;
+
+
+    }
+    .centar {
+        width: 440px;
+        height: 440px;
+        background-color: #050210;
+        border-radius: 50%;
+        animation: pulsiranje 2s linear infinite;
+    }
+
+    @keyframes rotacija {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+
+    @keyframes pulsiranje {
+        0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 70px #b97aff;
+        }
+         50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 70px #fb5dad;
+        }
+    }
+            
+    </style>
+</head>
+<body>
+<div class="krug">
+   <div class="centar"></div>
+</div>
+  
+</body>
+</html>
